@@ -1,0 +1,9 @@
+#100DaysOfFlutter Challenge 
+15th Sept 2020
+
+Day 1:
+     
+     Work: Learned to create Repo and Flutter Project all from Android Studio. 
+         : Editted main.dart to show a text on the App
+      
+     Thoughts: Motivated.
