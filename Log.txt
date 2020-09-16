@@ -14,3 +14,8 @@ Day 2:
         : Added Images and Text to the app.
 
     Thoughts: Interesting.
+Day 3:
+
+    Work: Used Row and multiple child
+
+    Thoughts: Tree Sructure

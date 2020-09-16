@@ -28,6 +28,39 @@ class _WeatherAppState extends State<WeatherApp> {
                   color: Colors.lightBlue[500],
                 ),),
             ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 35.0),
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    child: Text('Damak',style:
+                    TextStyle(
+                        fontSize: 35.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.indigo
+                    ) ,),
+                  ),
+                  SizedBox(width: 10.0,),
+                  Container(
+                    child: Icon(
+                      Icons.location_on,
+                      color: Colors.redAccent,
+                    ),
+                  ),
+                ],
+            ),
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              color: Colors.white,
+              child: ListTile(
+                leading: Icon(
+                    Icons.wb_sunny,
+                    color: Colors.amber,
+                ),
+                title: Text('temp 25 C'),
+              ),
+            ),
           ],
         )
       ),
