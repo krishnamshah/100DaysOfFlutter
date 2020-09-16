@@ -14,9 +14,22 @@ class _WeatherAppState extends State<WeatherApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SafeArea(
-          child: Text('Text Area')
-        ),
+        body: Column(
+          children: [
+            Container(
+              child:Image.asset('images/dayTime.jpg'),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 50.0),
+              child: Text('You are in:', style:
+                TextStyle(
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.lightBlue[500],
+                ),),
+            ),
+          ],
+        )
       ),
     );
   }

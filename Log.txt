@@ -7,3 +7,10 @@ Day 1:
          : Editted main.dart to show a text on the App
       
      Thoughts: Motivated.
+Day 2:
+
+    Work: Learned about OOPs.
+        : Scaffold -> App Bar, Body and Floating Widgets ; creation of multiple child
+        : Added Images and Text to the app.
+
+    Thoughts: Interesting.
