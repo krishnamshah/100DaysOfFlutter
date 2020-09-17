@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:intl/intl.dart';
 void main() {
   runApp(WeatherApp());
 }
@@ -66,4 +66,18 @@ class _WeatherAppState extends State<WeatherApp> {
       ),
     );
   }
+
+  //function to display images based on date and time
+  displayImage(){
+    var now = DateTime.now();
+    final currentTime = DateFormat.jm().format(now);
+    if( currentTime.contains('AM')){
+      return Image.asset('images/dayTime.jpg');
+    }
+    else if( currentTime.contains('PM')){
+      return Image.asset('images/nightTime.jpg');
+    }
+  }
 }
+
+
