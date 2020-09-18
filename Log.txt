@@ -26,3 +26,11 @@ Day 4:
 
     Thoughts: better use functions
 
+Day 5:
+
+    Work: created function that shows speciific city based on the location
+          created function that shows temp from the json file
+          Learned about Abstraction
+
+
+    Thoughts: Flutter is interesting
