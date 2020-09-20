@@ -14,10 +14,15 @@ class WeatherApp extends StatefulWidget {
 }
 
 class _WeatherAppState extends State<WeatherApp> {
+  String apikey='6554060f5df3f93d1ee26accc733c80e';
+  var description;
+  var temp;
+  String city;
+
+
   @override
   Widget build(BuildContext context) {
-    getLocation();
-    getTemp();
+
     return MaterialApp(
       home: Scaffold(
         body: Column(
@@ -39,7 +44,7 @@ class _WeatherAppState extends State<WeatherApp> {
               child: Row(
                 children: <Widget>[
                   Container(
-                    child: Text('Damak',style:
+                    child: Text('$city',style:
                     TextStyle(
                         fontSize: 35.0,
                         fontWeight: FontWeight.bold,
@@ -64,8 +69,26 @@ class _WeatherAppState extends State<WeatherApp> {
                     Icons.wb_sunny,
                     color: Colors.amber,
                 ),
-                title: Text('temp 25 C'),
+                title: Text(
+                  'Temperature: ${temp.toString()} C'
+                ),
+                subtitle: Text('Staus= ${description.toString()}'),
               ),
+            ),
+            Container(
+              child: Center(
+                child: FlatButton(
+                  child: Text('Get weather info'),
+                  color: Colors.lightBlue[500],
+                  textColor: Colors.white,
+                  onPressed: (){
+                    setState(() {
+                      getLocation();
+                    });
+                  },
+                )
+              )
+
             ),
           ],
         )
@@ -92,16 +115,18 @@ class _WeatherAppState extends State<WeatherApp> {
     print(getlocation.latitude);
     print(getlocation.longitude);
     print(getlocation.city);
+    city=getlocation.city;
+    getTemp(getlocation.latitude,getlocation.longitude);
   }
   //Get current Temperature
-  Future<void> getTemp() async{
-    http.Response response = await http.get('https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=439d4b804bc8187953eb36d2a8c26a02');
+  Future<void> getTemp(double lat,double lon) async{
+    http.Response response = await http.get('api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=${apikey}&units=metric');
     print(response.body);
 
     var dataDecoded = convert.jsonDecode(response.body);
-    var description = dataDecoded['weather'][0]['description'];
+    description = dataDecoded['weather'][0]['description'];
     print(description);
-    var temp = dataDecoded['main']['temp'];
+    temp = dataDecoded['main']['temp'];
     print(temp);
 }
 

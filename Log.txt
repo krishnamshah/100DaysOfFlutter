@@ -34,3 +34,12 @@ Day 5:
 
 
     Thoughts: Flutter is interesting
+
+Day 6:
+
+    Work: created function that shows live weather info of located city
+          created function that shows temp from api
+
+    Thoughts: Getting more interesting
+
+
