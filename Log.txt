@@ -42,4 +42,10 @@ Day 6:
 
     Thoughts: Getting more interesting
 
+Day 7:
+    Work: Completed App
+          Reformatted the code and icons
+          created multiple class for functions
+    Thoughts: Starting new project tomorrow
+
 
